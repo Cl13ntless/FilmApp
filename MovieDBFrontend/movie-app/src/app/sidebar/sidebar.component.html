@@ -1,0 +1,22 @@
+<div class="sidebar-container">
+  <nav class="sidebar">
+    <ul>
+     <li *ngIf="!currentUser">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li *ngIf="currentUser">
+        <a routerLink="/movies" routerLinkActive="active">Filme</a>
+      </li>
+      <li *ngIf="currentUser" >
+        <a routerLink="/ratings" routerLinkActive="active">Bewertungen</a>
+      </li>
+      <li *ngIf="currentUser">
+        <a routerLink="/users" routerLinkActive="active">Benutzer</a>
+      </li>
+    </ul>
+    <div *ngIf="currentUser" class="logout">
+      <button mat-raised-button color="warn" (click)="logout()"> Logout </button>
+    </div>
+  </nav>
+</div>
+

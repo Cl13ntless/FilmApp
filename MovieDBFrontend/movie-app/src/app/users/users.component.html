@@ -1,0 +1,22 @@
+<div class="user-card">
+<div class="users-container">
+  <div class="rating-item" *ngFor="let ratingArray of orderedRatings">
+    <div class="username">
+      <p>{{ ratingArray[0].account.username }}</p>
+    </div>
+    <ul>
+      <li *ngFor="let rating of ratingArray">
+        <hr>
+        <div class="movie-comment">
+          <p>{{rating.movie.title}}:</p>
+          <p id="comment">Kommentar: {{rating.comment }}</p>
+        </div>
+        <div class="rating-stars">
+          <ngb-rating [(rate)]="rating.stars" [readonly]="true"></ngb-rating>
+        </div>
+        <hr>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

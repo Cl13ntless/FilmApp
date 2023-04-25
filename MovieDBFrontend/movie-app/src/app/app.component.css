@@ -1,0 +1,27 @@
+.page-card{
+  height: 97%;
+  width: 98%;
+  margin: 15px auto auto;
+  border-radius: 25px;
+  background-color: #575a5e;
+  box-shadow: 3px 6px 9px -1px rgba(0,0,0,0.63);
+  display: flex;
+  gap: 0.5rem;
+}
+app-login-pill{
+  flex:1 5;
+}
+
+app-sidebar{
+  flex: 1;
+}
+
+.insertable{
+  flex:5;
+}
+
+app-login-pill{
+  height:44px;
+}
+
+

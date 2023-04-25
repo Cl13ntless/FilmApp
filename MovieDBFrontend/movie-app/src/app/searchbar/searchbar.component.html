@@ -1,0 +1,18 @@
+<div class="searchbar-container">
+  <form (ngSubmit)="searchForMovies(search)" class="searchbar-card">
+      <div class="dropdown-content">
+        <mat-form-field class="searchbar">
+          <span matPrefix> </span>
+          <input [(ngModel)]="search" matInput name="search" placeholder="Search for movies"
+                 type="tel">
+          <button mat-button matSuffix>
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+        <div class="dropdown-list-items">
+          <a (click)="onSelectedOption.emit(movie.id); search=movie.title" *ngFor="let movie of filteredMovies">{{movie.title}}</a>
+        </div>
+      </div>
+  </form>
+</div>
+

@@ -1,0 +1,13 @@
+-- INSERT INTO movie (description, director, title, year) VALUES ('Heööp', 'World', 'black panther', '2022');
+
+-- create temporary table t (adult text, belongs_to_collection text, budget integer, genres text,	homepage text,id integer,imdb_id text,original_language text,original_title	text, overview text,popularity double,	poster_path text,production_companies text,	production_countries text,	release_date date,	revenue	integer, runtime integer,	spoken_languages text,	status text,	tagline text,	title text,	video text,	vote_average double,	vote_count integer)
+--
+-- copy t (adult,belongs_to_collection,budget,genres,homepage,id,imdb_id,original_language,original_title,overview,popularity,poster_path,production_companies,production_countries,release_date	,revenue,	runtime,	spoken_languages,	status,	tagline,	title,	video,	vote_average,	vote_count,)
+-- from 'movies_metadata.csv'
+-- with (format csv)
+--
+-- INSERT INTO movie (description, title, year)
+-- select (overview, title, release_date)
+-- from t;
+--
+-- drop table t;

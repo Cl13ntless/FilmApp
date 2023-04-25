@@ -1,0 +1,13 @@
+<div class="movie-container">
+  <div class="card-container">
+  <div [class.expand-width]="selectedMovieID" [class.expand-card-height]="showDropDown" class="movie-card">
+    <div class="searchbar">
+      <app-searchbar (onSubmitSearch)="showDropDown = $event" [class.expand-searchbar-height]="showDropDown" (onSelectedOption)="onSelectedIdChange($event)"></app-searchbar>
+    </div>
+    <div *ngIf="selectedMovieID" class="movie-detail-card" [class.change-detail-card]="showMovieDesc"  >
+      <app-movie-detail [selectedMovieID]="selectedMovieID" [@inOutAnimation]="selectedMovieID"></app-movie-detail>
+        <button class="default-button" routerLink="{{'/ratings/' + selectedMovieID }}">Bewerte diesen Film</button>
+    </div>
+  </div>
+  </div>
+</div>
