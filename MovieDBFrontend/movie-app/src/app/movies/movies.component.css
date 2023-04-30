@@ -1,19 +1,41 @@
+@media screen and (max-width: 768px) {
+  .movie-card{
+    width: 100%;
+  }
+
+  .card-container{
+    height: 100%;
+    width: 100%;
+  }
+
+  .searchbar{
+    width: 100%;
+  }
+}
+
 .movie-container{
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
 }
 
 .card-container{
   width:100%;
   height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  padding: 1rem;
 }
 
 .movie-card{
-  width: 33%;
-  background-color: #bbbbbb;
+  width: 30%;
+  background-color: #2B2B2B;
   display: flex;
   flex-direction: row;
   height: 15%;
@@ -21,8 +43,8 @@
   justify-content: center;
   border-radius: 25px;
   transition: height 0.5s ease-in-out,width 0.5s ease-in-out;
+  margin-bottom: 1rem;
 }
-
 
 .expand-width{
   width: 100%;
@@ -39,7 +61,7 @@
 .searchbar{
   padding-top: 1.5rem;
   height: 100%;
-  width: 432.79px;
+  width: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -59,6 +81,16 @@ button{
   justify-content: center;
   align-items: center;
   width: 80%;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0c5aa8;
 }
 
 .movie-detail-card{
@@ -82,36 +114,6 @@ app-movie-detail{
   flex:2;
 }
 
-
-
-
-/*.add-movie-card{*/
-/*  flex:0;*/
-/*  width: 0;*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*}*/
-
-
-/*.change-add-movie-card{*/
-/*  flex:2;*/
-/*}*/
-
-/*.add-movie{*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: center;*/
-/*  width: 80%;*/
-/*}*/
-
-
-/*.add-movie h2{*/
-/*  width: 100%;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*}*/
-
 form {
   width: 100%;
 }
@@ -119,15 +121,17 @@ form {
 ul {
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
 }
-/* Für h2-Elemente */
+
+/* For h2-elements */
 h2 {
   font-size: 2rem;
   font-weight: 600;
   margin: 2rem 0;
 }
 
-/* Für label-Elemente */
+/* For label-elements */
 label {
   font-size: 1.2rem;
   font-weight: 500;
@@ -135,7 +139,7 @@ label {
   margin-bottom: 0.5rem;
 }
 
-/* Für input-Elemente */
+/* For input-elements */
 input[type="text"] {
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -143,34 +147,7 @@ input[type="text"] {
   border-radius: 0.5rem;
   width: 100%;
   margin-bottom: 1rem;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: #1a73e8;
-}
-
-/* Für ul- und li-Elemente */
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Für a-Elemente */
-a {
-  color: #1a73e8;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #0c5aa8;
+  background-color: #FFFFFF;
+  color: #1F1F1F
 }
 

@@ -1,27 +1,37 @@
-.page-card{
-  height: 97%;
-  width: 98%;
-  margin: 15px auto auto;
-  border-radius: 25px;
-  background-color: #575a5e;
-  box-shadow: 3px 6px 9px -1px rgba(0,0,0,0.63);
-  display: flex;
-  gap: 0.5rem;
-}
-app-login-pill{
-  flex:1 5;
+/* Small screens */
+@media screen and (max-width: 576px) {
+  .page-card {
+    flex-direction: column;
+    height: auto;
+    margin: 10px;
+    width: auto;
+  }
+
+  .insertable, app-sidebar, app-login-pill {
+    flex: 1;
+  }
 }
 
-app-sidebar{
-  flex: 1;
-}
+/* Medium and large screens */
+@media screen and (min-width: 577px) {
+  .page-card {
+    height: 97%;
+    margin: 15px auto auto;
+    width: 98%;
+  }
 
-.insertable{
-  flex:5;
-}
+  app-login-pill {
+    flex: 1 5;
+    height: 44px;
+  }
 
-app-login-pill{
-  height:44px;
+  app-sidebar {
+    flex: 1;
+  }
+
+  .insertable {
+    flex: 5;
+  }
 }
 
 

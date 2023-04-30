@@ -1,45 +1,105 @@
+:root {
+  --primary-color: #deb522;
+  --secondary-color: #0c0b00;
+  --background-color: #fcf7f7;
+  --accent-color: #128bb5;
+  --button-color: #deb522;
+}
+
+/* Search Bar Container */
 .searchbar-container{
   height:100%;
   width: 100%;
+  background-color: var(--background-color);
 }
 
+/* Search Bar Card */
 .searchbar-card{
   height:100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
 }
 
+/* Dropdown Content */
 .dropdown-content {
   width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
+/* Search Bar */
 .searchbar{
   margin-bottom: -1.25em;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Dropdown List Items */
 .dropdown-list-items{
   height:80%;
   overflow: scroll;
   border-radius: 15px;
 }
 
+/* Hide Scrollbar */
 .dropdown-list-items::-webkit-scrollbar{
   display: none;
 }
 
+/* Dropdown Links */
 .dropdown-list-items a {
   background-color: white;
-  color: black;
+  color: var(--secondary-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border-radius: 15px;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-list-items a:hover {background-color: #f1f1f1}
+.dropdown-list-items a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
 
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  /* Search Bar Container */
+  .searchbar-container{
+    padding: 2rem;
+  }
+
+  /* Search Bar Card */
+  .searchbar-card{
+    max-width: 800px;
+  }
+
+  /* Dropdown Content */
+  .dropdown-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Search Bar */
+  .searchbar{
+    width: 100%;
+  }
+
+  /* Dropdown List Items */
+  .dropdown-list-items{
+    margin-top: 1rem;
+    max-height: 400px;
+  }
+}
